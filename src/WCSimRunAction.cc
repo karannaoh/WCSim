@@ -69,8 +69,9 @@ void WCSimRunAction::BeginOfRunAction(const G4Run* /*aRun*/)
   
   G4String rootname = GetRootFileName();
   TFile* hfile = new TFile(rootname.c_str(),"RECREATE","WCSim ROOT file");
+  TFile* temphfile = new TFile("recreated.root","RECREATE","WCSim ROOT file");
   hfile->SetCompressionLevel(2);
-
+  temphfile->SetCompressionLevel(2);
   // Event tree
   WCSimTree = new TTree("wcsimT","WCSim Tree");
 

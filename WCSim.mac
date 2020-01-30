@@ -74,7 +74,7 @@
 /WCSim/PMTCollEff on
 
 # command to choose save or not save the pi0 info 07/03/10 (XQ)
-/WCSim/SavePi0 false
+#/WCSim/SavePi0 false
 
 
 #choose the Trigger & Digitizer type (and options)
@@ -119,9 +119,9 @@
 #/DarkRate/SetDarkWindow 4000
 
 #Uncomment one of the lines below if you want to use the OGLSX or RayTracer visualizer
-#/control/execute macros/visOGLSX.mac
-#/control/execute macros/visRayTracer.mac
-#/control/execute macros/visOGLQt.mac
+/control/execute macros/visOGLSX.mac
+/control/execute macros/visRayTracer.mac
+/control/execute macros/visOGLQt.mac
 
 
 
@@ -136,9 +136,9 @@
 # for a full list of /gun/ commands see:
 # http://geant4.web.cern.ch/geant4/G4UsersDocuments/UsersGuides/ForApplicationDeveloper/html/Control/UIcommands/_gun_.html
 /mygen/generator gun
-/gun/particle e-
-#/gun/particle pi0
-/gun/energy 500 MeV
+#/gun/particle e-
+/gun/particle pi0
+/gun/energy 100 MeV
 /gun/direction 1 0 0 
 /gun/position 0 0 0  
 
@@ -148,7 +148,7 @@
 # https://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/ForApplicationDeveloper/html/ch02s07.html
 #/mygen/generator gps
 #/gps/particle e-
-#/gps/energy 500 MeV
+#/gps/energy 100 MeV
 #/gps/direction 1 0 0
 #/gps/position 0 0 0
 
@@ -171,7 +171,7 @@
 
 ## change the name of the output root file, default = wcsim.root
 
-/WCSimIO/RootFile wcsim.root
+/WCSimIO/RootFile wcsim-temp.root
 
 ## set a timer running on WCSimRunAction
 #/WCSimIO/Timer false

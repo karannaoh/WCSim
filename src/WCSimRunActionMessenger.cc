@@ -17,7 +17,7 @@ WCSimRunActionMessenger::WCSimRunActionMessenger(WCSimRunAction* WCSimRA)
   RootFile->SetGuidance("Set the root file name");
   RootFile->SetGuidance("Enter the name of the output ROOT file");
   RootFile->SetParameterName("RootFileName",true);
-  RootFile->SetDefaultValue("wcsim.root");
+  RootFile->SetDefaultValue("wcsim-test.root");
 
   UseTimer = new G4UIcmdWithABool("/WCSimIO/Timer",this);
   UseTimer->SetGuidance("Use a timer for runtime");
